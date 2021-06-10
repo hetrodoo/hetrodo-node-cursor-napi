@@ -6,13 +6,13 @@ A node module to get information about the Windows mouse cursor, change its posi
 #### You must have [Python](https://www.python.org/) and [Visual Studio Community](https://visualstudio.microsoft.com/pt-br/) installed in order to install this package.
 
 ```bash
-yarn add node-hide-console-window
+yarn add node-cursor
 ```
 
 or
 
 ```bash
-npm install node-hide-console-window
+npm install node-cursor
 ```
 
 ## Usage
