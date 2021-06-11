@@ -93,14 +93,16 @@ NodeCursor.sendCursorEvent({
 ```typescript
 import {cursorEvents} from "node-cursor";
 
-cursorEvents.LEFT_DOWN
-cursorEvents.LEFT_UP
-cursorEvents.RIGHT_DOWN
-cursorEvents.RIGHT_UP
-cursorEvents.MIDDLE_DOWN
-cursorEvents.MIDDLE_UP
-cursorEvents.WHEEL
+cursorEvents.LEFT_DOWN //0x0002
+cursorEvents.LEFT_UP //0x0004
+cursorEvents.RIGHT_DOWN //0x0008
+cursorEvents.RIGHT_UP //0x0010
+cursorEvents.MIDDLE_DOWN //0x0020
+cursorEvents.MIDDLE_UP //0x0040
+cursorEvents.WHEEL //0x0800
 ```
+
+[All events](https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-mouse_event#parameters)
 
 ## Contributing
 
