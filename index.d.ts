@@ -4,7 +4,7 @@ interface POINT {
 }
 
 interface CursorEvent extends POINT {
-    event: CursorEvents
+    event: number
     data: number
 }
 

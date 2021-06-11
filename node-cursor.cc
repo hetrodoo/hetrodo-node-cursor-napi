@@ -1,7 +1,6 @@
 #include <v8.h>
 #include <node.h>
 #include <windows.h>
-#include <string>
 using namespace std;
 using namespace v8;
 
@@ -94,26 +93,17 @@ void SendCursorEvent(const FunctionCallbackInfo<Value>& args)
 
         if (hasEvent && hasData && hasX && hasY)
         {
-            int mouse_event;
+            int mouse_event_flag;
             int mouse_data;
             double x;
             double y;
 
-            POINT->Get(context, property_event_name).ToLocalChecked()->Int32Value(context).To(&mouse_event);
+            POINT->Get(context, property_event_name).ToLocalChecked()->Int32Value(context).To(&mouse_event_flag);
             POINT->Get(context, property_data_name).ToLocalChecked()->Int32Value(context).To(&mouse_data);
             POINT->Get(context, property_x_name).ToLocalChecked()->NumberValue(context).To(&x);
             POINT->Get(context, property_y_name).ToLocalChecked()->NumberValue(context).To(&y);
 
-            INPUT input;
-            input.type = INPUT_MOUSE;
-            input.mi.dx = x;
-            input.mi.dy = y;
-            input.mi.dwFlags = mouse_event;
-            input.mi.mouseData = mouse_data;
-            input.mi.dwExtraInfo = NULL;
-            input.mi.time = 0;
-
-            SendInput(1, &input, sizeof(INPUT));
+            mouse_event(mouse_event_flag, x, y, mouse_data, 0);
         }
         else
         {
