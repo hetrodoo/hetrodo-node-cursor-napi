@@ -1,6 +1,6 @@
 {
   "name": "node-cursor",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Windows mouse cursor utils.",
   "main": "index.js",
   "repository": "https://github.com/hetrodoo/hetrodo-node-cursor-napi",
