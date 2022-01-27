@@ -7,7 +7,8 @@ const cursorEvents = Object.freeze({
     RIGHT_UP: 0x0010,
     MIDDLE_DOWN: 0x0020,
     MIDDLE_UP: 0x0040,
-    WHEEL: 0x0800
+    WHEEL: 0x0800,
+    MOUSEEVENTF_MOVE: 0x0001
 });
 
 module.exports = {
