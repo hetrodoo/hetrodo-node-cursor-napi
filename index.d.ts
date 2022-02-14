@@ -16,6 +16,7 @@ interface CursorEvents {
     MIDDLE_DOWN: number
     MIDDLE_UP: number
     WHEEL: number
+    MOUSEEVENTF_MOVE: number
 }
 
 declare const NodeCursor: {
